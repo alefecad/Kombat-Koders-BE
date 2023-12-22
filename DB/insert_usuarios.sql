@@ -1,0 +1,22 @@
+INSERT INTO Usuario (nombre, direccion, telefono, email, contraseña, fechaNacimiento, rol_id)
+VALUES
+('Olivia Rivas', 'Av. Insurgentes Sur 1234, Col. Del Valle, CDMX', '123456789', 'olivia@gmail.com', 'contraseña1', '2000-01-01', 1),
+('Cynthia Rosales', 'Av. Paseo de la Reforma 567, Col. Juárez, CDMX', '123456780', 'cynthia@hotmail.com', 'contraseña2', '1999-02-02', 1),
+('Brayan Hernández', 'Calle Durango 89, Col. Roma, CDMX', '123456781', 'brayan@gmail.com', 'contraseña3', '1998-03-03', 1),
+('Mario Mata', 'Av. Álvaro Obregón 456, Col. Condesa, CDMX', '123456782', 'mario@hotmail.com', 'contraseña4', '1997-04-04', 1),
+('Miguel Ortega', 'Calle Tamaulipas 678, Col. Hipódromo, CDMX', '123456783', 'miguel@gmail.com', 'contraseña5', '1996-05-05', 1),
+('Alejandro Flores', 'Av. Álvaro Obregón 789, Col. Roma Norte, CDMX', '123456784', 'alejandro@hotmail.com', 'contraseña6', '1995-06-06', 1),
+('María Pérez', 'Av. Insurgentes Sur 2468, Col. Del Valle, CDMX', '123456785', 'maria@gmail.com', 'contraseña7', '1994-07-07', 1),
+('Juan González', 'Av. Universidad 345, Col. Narvarte, CDMX', '123456786', 'juan@hotmail.com', 'contraseña8', '1993-08-08', 2),
+('Laura Martínez', 'Calle Guadalajara 567, Col. Roma, CDMX', '123456787', 'laura@gmail.com', 'contraseña9', '1992-09-09', 2),
+('Pedro Sánchez', 'Av. Cuauhtémoc 456, Col. Roma Norte, CDMX', '123456788', 'pedro@hotmail.com', 'contraseña10', '1991-10-10', 2),
+('Ana López', 'Av. Chapultepec 1234, Col. Condesa, CDMX', '123456789', 'ana@gmail.com', 'contraseña11', '1990-11-11', 2),
+('Diego Rodríguez', 'Av. Álvaro Obregón 567, Col. Roma Norte, CDMX', '123456790', 'diego@hotmail.com', 'contraseña12', '1989-12-12', 2),
+('Fernanda García', 'Av. Insurgentes Sur 2468, Col. Del Valle, CDMX', '123456791', 'fernanda@gmail.com', 'contraseña13', '1988-01-01', 2),
+('Carlos Martínez', 'Av. Universidad 345, Col. Narvarte, CDMX', '123456792', 'carlos@hotmail.com', 'contraseña14', '1987-02-02', 2),
+('Diana Rodríguez', 'Calle Guadalajara 567, Col. Roma, CDMX', '123456793', 'diana@gmail.com', 'contraseña15', '1986-03-03', 2),
+('Javier Sánchez', 'Av. Cuauhtémoc 789, Col. Doctores, CDMX', '123456794', 'javier@hotmail.com', 'contraseña16', '1985-04-04', 2),
+('Isabela Pérez', 'Av. Chapultepec 1234, Col. Condesa, CDMX', '123456795', 'isabela@gmail.com', 'contraseña17', '1984-05-05', 2),
+('Rodrigo García', 'Av. Álvaro Obregón 567, Col. Roma Norte, CDMX', '123456796', 'rodrigo@hotmail.com', 'contraseña18', '1983-06-06', 2),
+('Natalia Martínez', 'Calle Durango 890, Col. Roma, CDMX', '123456797', 'natalia@gmail.com', 'contraseña19', '1982-07-07', 2),
+('Sofía Hernández', 'Av. Paseo de la Reforma 456, Col. Juárez, CDMX', '123456798', 'sofia@hotmail.com', 'contraseña20', '1981-08-08', 2);
