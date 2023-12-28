@@ -19,7 +19,7 @@ USE `db_petsupermarket` ;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `db_petsupermarket`.`Rol` (
   `id` BIGINT NOT NULL AUTO_INCREMENT,
-  `nombre` VARCHAR(10) NOT NULL,
+  `nombre` VARCHAR(45) NOT NULL,
   `descripcion` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
@@ -34,16 +34,18 @@ CREATE TABLE IF NOT EXISTS `db_petsupermarket`.`Usuario` (
   `direccion` VARCHAR(300) NOT NULL,
   `telefono` VARCHAR(30) NOT NULL,
   `email` VARCHAR(120) NOT NULL,
-  `password` VARCHAR(45) NOT NULL,
+  `contraseña` VARCHAR(45) NOT NULL,
   `fechaNacimiento` TIMESTAMP NOT NULL,
+  `ciudad` VARCHAR(45) NOT NULL,
+  `cp` VARCHAR(10) NOT NULL,
   `Rol_id` BIGINT NOT NULL,
   PRIMARY KEY (`id`, `Rol_id`),
   INDEX `fk_Usuario_Rol_idx` (`Rol_id` ASC) VISIBLE,
   CONSTRAINT `fk_Usuario_Rol`
     FOREIGN KEY (`Rol_id`)
     REFERENCES `db_petsupermarket`.`Rol` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
 
@@ -69,8 +71,8 @@ CREATE TABLE IF NOT EXISTS `db_petsupermarket`.`Tipo_Producto` (
   CONSTRAINT `fk_Tipo_Producto_Categorias1`
     FOREIGN KEY (`Categorias_id`)
     REFERENCES `db_petsupermarket`.`Categorias` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
 
@@ -80,12 +82,12 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `db_petsupermarket`.`Producto` (
   `id` BIGINT NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(45) NOT NULL,
-  `descripcion` VARCHAR(45) NOT NULL,
+  `descripcion` VARCHAR(200) NOT NULL,
   `contenido` VARCHAR(45) NOT NULL,
   `precio` DECIMAL NOT NULL,
-  `descuento` VARCHAR(45) NOT NULL,
+  `descuento` INT NOT NULL,
   `existencia` BIGINT NOT NULL,
-  `imagen` VARCHAR(45) NOT NULL,
+  `imagen` VARCHAR(500) NOT NULL,
   `marca` VARCHAR(45) NOT NULL,
   `Tipo_Producto_id` BIGINT NOT NULL,
   `Tipo_Producto_Categorias_id` BIGINT NOT NULL,
@@ -94,8 +96,8 @@ CREATE TABLE IF NOT EXISTS `db_petsupermarket`.`Producto` (
   CONSTRAINT `fk_Producto_Tipo_Producto1`
     FOREIGN KEY (`Tipo_Producto_id` , `Tipo_Producto_Categorias_id`)
     REFERENCES `db_petsupermarket`.`Tipo_Producto` (`id` , `Categorias_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
 
@@ -111,8 +113,8 @@ CREATE TABLE IF NOT EXISTS `db_petsupermarket`.`Bolsa` (
   CONSTRAINT `fk_Bolsa_Usuario1`
     FOREIGN KEY (`Usuario_id`)
     REFERENCES `db_petsupermarket`.`Usuario` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
 
@@ -130,13 +132,13 @@ CREATE TABLE IF NOT EXISTS `db_petsupermarket`.`Bolsa_has_productos` (
   CONSTRAINT `fk_Bolsa_has_productos_Bolsa1`
     FOREIGN KEY (`Bolsa_id`)
     REFERENCES `db_petsupermarket`.`Bolsa` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
   CONSTRAINT `fk_Bolsa_has_productos_Producto1`
     FOREIGN KEY (`Producto_id`)
     REFERENCES `db_petsupermarket`.`Producto` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
 
@@ -149,30 +151,16 @@ CREATE TABLE IF NOT EXISTS `db_petsupermarket`.`Comentarios` (
   `comentario` VARCHAR(100) NULL,
   `calificacion` INT NULL,
   `Usuario_id` BIGINT NOT NULL,
+  `Producto_id` BIGINT NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_Comentarios_Usuario1_idx` (`Usuario_id` ASC) VISIBLE,
+  INDEX `fk_Comentarios_Producto1_idx` (`Producto_id` ASC) VISIBLE,
   CONSTRAINT `fk_Comentarios_Usuario1`
     FOREIGN KEY (`Usuario_id`)
     REFERENCES `db_petsupermarket`.`Usuario` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `db_petsupermarket`.`Producto_has_comentario`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `db_petsupermarket`.`Producto_has_comentario` (
-  `Comentarios_id` BIGINT NOT NULL,
-  `Producto_id` BIGINT NOT NULL,
-  INDEX `fk_Producto_has_comentario_Comentarios1_idx` (`Comentarios_id` ASC) VISIBLE,
-  INDEX `fk_Producto_has_comentario_Producto1_idx` (`Producto_id` ASC) VISIBLE,
-  CONSTRAINT `fk_Producto_has_comentario_Comentarios1`
-    FOREIGN KEY (`Comentarios_id`)
-    REFERENCES `db_petsupermarket`.`Comentarios` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_Producto_has_comentario_Producto1`
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
+  CONSTRAINT `fk_Comentarios_Producto1`
     FOREIGN KEY (`Producto_id`)
     REFERENCES `db_petsupermarket`.`Producto` (`id`)
     ON DELETE NO ACTION
