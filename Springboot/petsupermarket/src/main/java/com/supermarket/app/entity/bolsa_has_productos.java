@@ -20,7 +20,7 @@ public class bolsa_has_productos {
 
     @ManyToOne
     @JoinColumn(name = "bolsa_id", nullable = false)
-    private bolsa bolsa;
+    private Bolsa bolsa;
 
     @ManyToOne
     @JoinColumn(name = "producto_id", nullable = false)

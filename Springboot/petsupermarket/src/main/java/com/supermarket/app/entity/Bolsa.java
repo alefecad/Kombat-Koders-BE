@@ -10,7 +10,8 @@ import lombok.*;
 @ToString
 @Entity
 @Table(name = "bolsa")
-public class bolsa {
+
+public class Bolsa {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,7 +22,6 @@ public class bolsa {
 
     @ManyToOne
     @JoinColumn(name = "Usuario_id", nullable = false)
-    private usuario usuario;
+    private Usuario usuario;
 
-    // Getters y setters
 }
