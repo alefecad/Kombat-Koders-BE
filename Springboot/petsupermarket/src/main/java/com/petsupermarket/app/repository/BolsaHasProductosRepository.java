@@ -8,7 +8,7 @@ import org.springframework.data.repository.CrudRepository;
 
 
 public interface BolsaHasProductosRepository extends CrudRepository<BolsaHasProductos, Long>{
-	Optional<BolsaHasProductos> findById(int id);
-	Optional<Bolsa> findById(int id);
-	Optional<Producto> findById(int id);
+	Optional<BolsaHasProductos> findBolsaHasProductosById(int id);
+	Optional<Bolsa> findBolsaById(int id);
+	Optional<Producto> findProductoById(int id);
 }

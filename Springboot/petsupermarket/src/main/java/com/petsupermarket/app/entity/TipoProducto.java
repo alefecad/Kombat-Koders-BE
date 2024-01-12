@@ -21,6 +21,6 @@ import lombok.*;
 
 	   @ManyToOne
 	   @JoinColumn(name = "categorias_id", nullable = false)
-	    private Categorias categorias;
+	    private Categorias categoria;
 }
 
