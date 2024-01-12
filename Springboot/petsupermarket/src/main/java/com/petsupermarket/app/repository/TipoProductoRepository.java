@@ -1,10 +1,11 @@
-package com.supermarket.app.repository;
+package com.petsupermarket.app.repository;
 
-import com.supermarket.app.entity.Categorias;
-import com.supermarket.app.entity.TipoProducto;
 import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
+
+import com.petsupermarket.app.entity.Categorias;
+import com.petsupermarket.app.entity.TipoProducto;
 
 public interface TipoProductoRepository extends CrudRepository<TipoProducto, Long> {
     TipoProducto findByTipoProducto(String tipoProducto);

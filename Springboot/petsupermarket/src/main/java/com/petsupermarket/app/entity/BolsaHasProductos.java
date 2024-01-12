@@ -1,4 +1,4 @@
-package com.supermarket.app.entity;
+package com.petsupermarket.app.entity;
 
 import lombok.*;
 import jakarta.persistence.*;

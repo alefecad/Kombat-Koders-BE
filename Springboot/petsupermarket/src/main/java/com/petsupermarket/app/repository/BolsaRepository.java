@@ -1,8 +1,9 @@
-package com.supermarket.app.repository;
+package com.petsupermarket.app.repository;
 
-import com.supermarket.app.entity.Bolsa;
-import com.supermarket.app.entity.Usuario;  // Asegúrate de importar la clase Usuario
 import org.springframework.data.repository.CrudRepository;
+
+import com.petsupermarket.app.entity.Bolsa;
+import com.petsupermarket.app.entity.Usuario;
 
 import java.util.List;
 

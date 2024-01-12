@@ -1,6 +1,5 @@
-package com.supermarket.app.entity;
+package com.petsupermarket.app.entity;
 
-import java.sql.Timestamp;
 import jakarta.persistence.*;
 import lombok.*;
 
