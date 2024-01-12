@@ -11,7 +11,7 @@ import lombok.*;
 @ToString
 @Entity
 @Table(name="producto")
-public class producto {
+public class Producto {
 
 
 		@Id // Indica que el atributo será la clave primaria de la entidad
@@ -36,9 +36,9 @@ public class producto {
 		
 		@ManyToOne
 		@JoinColumn(name="Tipo_Producto_id", nullable=false)
-		private producto producto;
+		private Producto producto;
 		
 		@ManyToOne
 		@JoinColumn(name="Tipo_Producto_Categoria_id", nullable=false)
-		private productocategoria productoCategoria;
+		private Categorias categoria;
 }

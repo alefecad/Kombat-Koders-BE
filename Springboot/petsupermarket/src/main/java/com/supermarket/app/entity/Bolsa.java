@@ -1,5 +1,7 @@
 package com.supermarket.app.entity;
 
+import java.sql.Timestamp;
+
 import jakarta.persistence.*;
 import lombok.*;
 

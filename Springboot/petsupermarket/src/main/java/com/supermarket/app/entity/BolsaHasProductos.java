@@ -10,7 +10,7 @@ import jakarta.persistence.*;
 @ToString
 @Entity
 @Table(name="bolsa_has_productos")
-public class bolsa_has_productos {
+public class BolsaHasProductos {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -24,7 +24,7 @@ public class bolsa_has_productos {
 
     @ManyToOne
     @JoinColumn(name = "producto_id", nullable = false)
-    private producto producto;
+    private Producto producto;
 }
 
 /*

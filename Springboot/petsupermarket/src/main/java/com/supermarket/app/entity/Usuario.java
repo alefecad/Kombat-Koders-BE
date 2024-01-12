@@ -13,7 +13,7 @@ import jakarta.persistence.*;
 @ToString
 @Entity
 @Table(name="usuario")
-public class usuario {
+public class Usuario {
 
 	
 
@@ -37,5 +37,5 @@ public class usuario {
 		
 		@ManyToOne
 		@JoinColumn(name="Rol_id", nullable=false)
-		private rol rol;
+		private Rol rol;
 }

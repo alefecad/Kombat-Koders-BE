@@ -11,7 +11,7 @@ import lombok.*;
 @ToString
 @Entity
 @Table(name="categorias")
-public class categorias {
+public class Categorias {
 	@Id	//Es una llave primaria
 	@GeneratedValue( strategy=GenerationType.IDENTITY)	//Auto Incrementable
 	private Long id;

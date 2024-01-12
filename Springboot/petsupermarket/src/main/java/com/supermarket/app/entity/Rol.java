@@ -10,7 +10,7 @@ import jakarta.persistence.*;
 @ToString
 @Entity
 @Table(name = "rol")
-public class rol {
+public class Rol {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

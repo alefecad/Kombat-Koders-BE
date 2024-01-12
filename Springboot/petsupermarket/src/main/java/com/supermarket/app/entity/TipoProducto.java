@@ -11,7 +11,7 @@ import lombok.*;
 @ToString
 @Entity
 @Table(name = "tipo_producto")
-	public class tipo_producto {
+	public class TipoProducto {
 
 	    @Id
 	    @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,6 +22,6 @@ import lombok.*;
 
 	   @ManyToOne
 	   @JoinColumn(name = "categorias_id", nullable = false)
-	    private categorias categorias;
+	    private Categorias categorias;
 }
 
