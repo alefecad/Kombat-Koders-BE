@@ -28,12 +28,14 @@ public class Usuario {
 		private String telefono;
 		@Column(name="email", nullable=false, length=120, unique=true)
 		private String email;
-		@Column(name="fechaNacimiento")
+		@Column(name="fecha_nacimiento")
 		private Timestamp birthdate;
 		@Column(name="ciudad", nullable=false, length=45)
 		private String ciudad;
 		@Column(name="cp", nullable=false, length=10)
 		private String cp;
+		@Column(name="contraseña", nullable=false, length=30)
+		private String contraseña;
 		
 		@ManyToOne
 		@JoinColumn(name="Rol_id", nullable=false)

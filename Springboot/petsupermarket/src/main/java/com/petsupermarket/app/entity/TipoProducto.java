@@ -18,9 +18,9 @@ import lombok.*;
 
 	    @Column(name = "tipoProducto", nullable = false, length = 45)
 	    private String tipoProducto;
-
-	   @ManyToOne
-	   @JoinColumn(name = "categorias_id", nullable = false)
-	    private Categorias categoria;
+	    
+	   // @ManyToOne
+	   // @JoinColumn(name = "categoria_id", nullable = false)
+	   //  private Categorias categoria;
 }
 

@@ -34,10 +34,11 @@ public class Producto {
 		private String marca;
 		
 		@ManyToOne
-		@JoinColumn(name="Tipo_Producto_id", nullable=false)
-		private Producto producto;
+	    @JoinColumn(name = "Tipo_Producto_id", nullable = false)
+	    private TipoProducto tipoProducto;	
 		
-		@ManyToOne
-		@JoinColumn(name="Tipo_Producto_Categoria_id", nullable=false)
-		private Categorias categoria;
+		 @ManyToOne
+		    @JoinColumn(name = "Categorias_id", nullable = false)
+		    private Categorias categoria;
+		
 }

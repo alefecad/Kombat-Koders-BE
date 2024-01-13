@@ -1,5 +1,7 @@
 package com.petsupermarket.app.entity;
 
+import java.util.Set;
+
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -17,7 +19,9 @@ public class Categorias {
 	private Long id;
 	@Column(name="nombre", nullable=false, length=45)
 	private String nombre;
+	
 }
+
 
 /*
 GenerationType.AUTO: Esta estrategia le permite al proveedor de JPA 
