@@ -36,8 +36,11 @@ public class Usuario {
 		private String cp;
 		@Column(name="contraseña", nullable=false, length=30)
 		private String contraseña;
+		@Column(name="activo")
+		private boolean active;
 		
 		@ManyToOne
 		@JoinColumn(name="Rol_id", nullable=false)
 		private Rol rol;
+
 }
