@@ -3,7 +3,6 @@ package com.petsupermarket.app.service.impl;
 import com.petsupermarket.app.entity.Bolsa;
 import com.petsupermarket.app.entity.Usuario;
 import com.petsupermarket.app.repository.BolsaRepository;
-import com.petsupermarket.app.service.BolsaService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
