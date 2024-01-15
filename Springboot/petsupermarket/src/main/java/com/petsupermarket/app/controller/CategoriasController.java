@@ -11,7 +11,7 @@ import com.petsupermarket.app.repository.CategoriasRepository;
 @RestController
 @RequestMapping("api/v1/categorias")
 public class CategoriasController {
-	CategoriasRepository categoriasRepository = null;
+	CategoriasRepository categoriasRepository;
 	@Autowired
     public void CategoriasRepository(CategoriasRepository categoriasRepository) {
         this.categoriasRepository = categoriasRepository;
