@@ -56,9 +56,9 @@ public class UsuarioServiceImpl implements UsuarioService {
 	}
 
 	@Override
-	public List<Usuario> getAllUsuario() {
-		List<Usuario> usuario = (List<Usuario>) usuarioRepository.findAll();
-		return usuario;
+	public List<Usuario> getAllUsuarios() {
+		List<Usuario> usuarios = (List<Usuario>) usuarioRepository.findAll();
+		return usuarios;
 	}
 
 	@Override
