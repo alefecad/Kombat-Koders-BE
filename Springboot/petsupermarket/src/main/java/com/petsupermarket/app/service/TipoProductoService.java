@@ -12,9 +12,6 @@ public interface TipoProductoService {
 	TipoProducto getTipoProductoByTipoProducto(String tipoProducto);
 	void eliminarTipoProducto(Long id);
 	Optional<TipoProducto> actualizarTipoProducto(Long id, TipoProducto tipoProducto);
-	 default List<TipoProducto> getAllTipoProductos() {
-		return null;
-	}
-	
+	List<TipoProducto> getAllTipoProductos();	
 }
  

@@ -22,11 +22,11 @@ public class TipoProductoController{
 	        return tipoProductoService.getTipoProductoById(id);
 	    }
 	
-	 @GetMapping
-	 public List<TipoProducto> getAllTipoProductos() {
-	     List<TipoProducto> tipoProductos = tipoProductoService.getAllTipoProductos();
-	     return tipoProductos;
-	 }
+	@GetMapping
+	public List<TipoProducto> getAllTipoProductos() {
+	    List<TipoProducto> tipoProductos = tipoProductoService.getAllTipoProductos();
+	    return tipoProductos;
+	}
 	
 	@GetMapping("tipoProducto")
     public TipoProducto getTipoProductoByTipo(@RequestParam String tipoProducto) {
