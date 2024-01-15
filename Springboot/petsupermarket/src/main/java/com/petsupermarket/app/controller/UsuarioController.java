@@ -2,6 +2,9 @@ package com.petsupermarket.app.controller;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.*;
+import org.springframework.http.*;
+import org.springframework.web.bind.annotation.*;
 import com.petsupermarket.app.entity.Usuario;
 
 public class UsuarioController {
