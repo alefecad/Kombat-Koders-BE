@@ -1,47 +1,12 @@
 package com.petsupermarket.app.controller;
 
-<<<<<<< HEAD
-=======
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
->>>>>>> equipo2_tarea13
 import com.petsupermarket.app.entity.TipoProducto;
-import com.petsupermarket.app.service.TipoProductoService;
+import com.petsupermarket.app.repository.TipoProductoRepository;
 
-import java.util.List;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
-
-@CrossOrigin(origins = "*")
 @RestController
-<<<<<<< HEAD
-@RequestMapping("/tipoProductos")
-
-public class TipoProductoController{
-	
-	@Autowired
-	TipoProductoService tipoProductoService;
-	
-	 @GetMapping("{id}")
-	    public TipoProducto getTipoProductoById(@PathVariable Long id) {
-	        return tipoProductoService.getTipoProductoById(id);
-	    }
-	
-	 @GetMapping
-	 public List<TipoProducto> getAllTipoProductos() {
-	     List<TipoProducto> tipoProductos = tipoProductoService.getAllTipoProductos();
-	     return tipoProductos;
-	 }
-	
-	@GetMapping("tipoProducto")
-    public TipoProducto getTipoProductoByTipo(@RequestParam String tipoProducto) {
-        return tipoProductoService.getTipoProductoByTipoProducto(tipoProducto);
-    }	
-	
-}
-=======
 @RequestMapping("api/v1/tipoProducto")
 public class TipoProductoController {
 
@@ -83,4 +48,3 @@ public class TipoProductoController {
         tipoProductoRepository.deleteById(id);
     }
 }
->>>>>>> equipo2_tarea13
