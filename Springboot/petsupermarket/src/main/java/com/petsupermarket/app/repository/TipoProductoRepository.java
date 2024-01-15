@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.petsupermarket.app.entity.Categorias;
 import com.petsupermarket.app.entity.TipoProducto;
 
 public interface TipoProductoRepository extends CrudRepository<TipoProducto, Long> {
