@@ -7,11 +7,14 @@ import com.petsupermarket.app.entity.TipoProducto;
 public interface TipoProductoService {
 
 	TipoProducto getUserByTipoProducto(Long id);
+	TipoProducto getTipoProductoById(Long id);
 	TipoProducto crearTipoProducto(TipoProducto tipoProducto);
+	TipoProducto getTipoProductoByTipoProducto(String tipoProducto);
 	void eliminarTipoProducto(Long id);
 	Optional<TipoProducto> actualizarTipoProducto(Long id, TipoProducto tipoProducto);
 	static List<TipoProducto> getAllTipoProductos() {
 		return null;
 	}
+	
 }
  
