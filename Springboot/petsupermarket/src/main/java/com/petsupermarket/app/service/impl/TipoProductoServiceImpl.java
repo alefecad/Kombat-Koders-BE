@@ -6,7 +6,6 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.petsupermarket.app.entity.Bolsa;
 import com.petsupermarket.app.entity.TipoProducto;
 import com.petsupermarket.app.repository.TipoProductoRepository;
 import com.petsupermarket.app.service.TipoProductoService;
@@ -33,7 +32,7 @@ public abstract class TipoProductoServiceImpl implements TipoProductoService {
             tipoProducto.setId(id);
             return Optional.of(tipoProductoRepository.save(tipoProducto));
         }
-        return Optional.empty(); // Manejar la lógica de error
+        return Optional.empty(); 
     }
 
     @Override
