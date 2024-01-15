@@ -8,8 +8,8 @@ public interface TipoProductoService {
 	TipoProducto getTipoProductoById(Long id);
 	TipoProducto getTipoProductoByTipoProducto(String tipoProducto);
 	static List<TipoProducto> getAllTipoProductos() {
-		// TODO Auto-generated method stub
 		return null;
 	}
+	TipoProducto getUserByTipoProducto(Long id);
 }
  
