@@ -34,10 +34,17 @@ public class BolsaController {
     }
 
     @GetMapping("/usuario/{usuarioId}")
-    public List<Bolsa> obtenerBolsasPorUsuario(@PathVariable Long usuarioId) {
-        Optional<Usuario> usuario = usuarioService.obtenerUsuarioPorId(usuarioId);
-        return usuario.map(bolsaService::obtenerBolsasPorUsuario).orElse(null);
+    public ResponseEntity<List<Bolsa>> obtenerBolsasPorUsuario(@PathVariable Long id) {
+        Usuario usuario = usuarioService.getUsuarioById(id);
+        if (usuario != null) {
+            List<Bolsa> bolsas = bolsaService.obtenerBolsasPorUsuario(usuario);
+            return ResponseEntity.ok(bolsas);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
     }
+
+
 
     @PostMapping
     public ResponseEntity<Bolsa> crearBolsa(@RequestBody Bolsa bolsa) {
