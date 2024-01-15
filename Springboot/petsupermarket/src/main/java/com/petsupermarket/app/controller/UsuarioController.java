@@ -6,44 +6,47 @@ import org.springframework.beans.factory.annotation.*;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 import com.petsupermarket.app.entity.Usuario;
+import com.petsupermarket.app.service.UsuarioService;
 
+@RestController
+@RequestMapping("api/v1/usuarios")
 public class UsuarioController {
 	@Autowired
-	UsuarioDtoService usuarioDtoService;
+	UsuarioService usuarioService;
 	
 	@GetMapping
-	ResponseEntity< List<UsuarioDto> > getAllUsers(){
-		List<UsuarioDto> usuarioDto = usuarioDtoService.getAllUsers();
+	ResponseEntity< List<Usuario> > getAllUsers(){
+		List<Usuario> usuarioDto = usuarioService.getAllUsuario();
 		return new ResponseEntity<>(usuarioDto, HttpStatus.OK );
 	}
 	
 	@GetMapping("{id}")
-	ResponseEntity<UsuarioDto> getUsuarioById(@PathVariable("id") Long id) {
-		UsuarioDto usuarioDto = usuarioDtoService.getUsuarioById(id);
-		return new ResponseEntity<>(usuarioDto, HttpStatus.OK );
+	ResponseEntity<Usuario> getUsuarioById(@PathVariable("id") Long id) {
+		Usuario usuario = usuarioService.getUsuarioById(id);
+		return new ResponseEntity<>(usuario, HttpStatus.OK );
 	}
 	
 	@PostMapping
-	ResponseEntity<UsuarioDto> setUsuario(@RequestBody Usuario usuario) {	
-		UsuarioDto newUsuarioDto = usuarioDtoService.createUsuario(usuario);
-		return new ResponseEntity<>(newUsuarioDto, HttpStatus.CREATED );
+	ResponseEntity<Usuario> setUsuario(@RequestBody Usuario usuario) {	
+		Usuario newUsuario = usuarioService.createUsuario(usuario);
+		return new ResponseEntity<>(newUsuario, HttpStatus.CREATED );
 	}
 	
 	@GetMapping("query") 
-	ResponseEntity<UsuarioDto> getUserByEmail(@RequestParam(name="email") String email) {
-		UsuarioDto usuarioDto = usuarioDtoService.getUserByEmail(email);
-		return new ResponseEntity<>(usuarioDto, HttpStatus.OK );
+	ResponseEntity<Usuario> getUserByEmail(@RequestParam(name="email") String email) {
+		Usuario usuario = usuarioService.getUsuarioByEmail(email);
+		return new ResponseEntity<>(usuario, HttpStatus.OK );
 	}
 	
 	@PutMapping("{id}")
-	ResponseEntity<UsuarioDto> updateUsuario(@RequestBody Usuario usuario, @PathVariable("id") Long id) {
-		UsuarioDto usuarioDto = usuarioDtoService.updateUsuario(usuario, id);
-		return new ResponseEntity<>(usuarioDto, HttpStatus.OK );
+	ResponseEntity<Usuario> updateUsuario(@RequestBody Usuario usuario, @PathVariable("id") Long id) {
+		Usuario newUsuario = usuarioService.updateUsuario(usuario, id);
+		return new ResponseEntity<>(newUsuario, HttpStatus.OK );
 	}
 	
 	@DeleteMapping("{id}")
 	ResponseEntity<String> deleteUsuario(@PathVariable("id") Long id ) {
-		usuarioDtoService.deleteUsuario(id);
+		usuarioService.deleteUsuario(id);
 		return new ResponseEntity<>("Usuario id " + id + " successfully deleted", HttpStatus.OK );
 		
 	}
