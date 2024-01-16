@@ -45,7 +45,6 @@ public class BolsaController {
     }
 
 
-
     @PostMapping
     public ResponseEntity<Bolsa> crearBolsa(@RequestBody Bolsa bolsa) {
         Bolsa nuevaBolsa = bolsaService.crearBolsa(bolsa);

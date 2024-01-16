@@ -1,5 +1,6 @@
 package com.petsupermarket.app.service;
 
+
 import java.util.List;
 import java.util.Optional;
 import com.petsupermarket.app.entity.TipoProducto;
@@ -14,4 +15,4 @@ public interface TipoProductoService {
 	Optional<TipoProducto> actualizarTipoProducto(Long id, TipoProducto tipoProducto);
 	List<TipoProducto> getAllTipoProductos();	
 }
- 
+

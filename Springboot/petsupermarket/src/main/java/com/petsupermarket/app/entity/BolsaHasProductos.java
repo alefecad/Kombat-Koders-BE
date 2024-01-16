@@ -11,22 +11,22 @@ import jakarta.persistence.*;
 @Entity
 @Table(name="bolsa_has_productos")
 public class BolsaHasProductos {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
+    @EmbeddedId
+    private BolsaHasProductos id;  
+    
     @Column(name = "cantidad", nullable = false)
     private int cantidad;
 
     @ManyToOne
+    @MapsId("orderId")  // Mapear la propiedad orderId de OrderProductKey
     @JoinColumn(name = "bolsa_id", nullable = false)
     private Bolsa bolsa;
 
     @ManyToOne
+    @MapsId("productId")  // Mapear la propiedad productId de OrderProductKey
     @JoinColumn(name = "producto_id", nullable = false)
-    private Producto producto;
+    private Producto producto;
 }
-
 /*
 GenerationType.AUTO: Esta estrategia le permite al proveedor de JPA 
 elegir automáticamente la estrategia de generación más adecuada según 
