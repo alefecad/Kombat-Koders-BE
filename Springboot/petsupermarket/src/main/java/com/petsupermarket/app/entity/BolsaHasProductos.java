@@ -1,6 +1,9 @@
 package com.petsupermarket.app.entity;
 
 import lombok.*;
+
+import com.petsupermarket.app.entity.compositeKey.BolsaHasProductosKey;
+
 import jakarta.persistence.*;
 
 @AllArgsConstructor
@@ -11,22 +14,25 @@ import jakarta.persistence.*;
 @Entity
 @Table(name="bolsa_has_productos")
 public class BolsaHasProductos {
-    @EmbeddedId
-    private BolsaHasProductos id;  
     
+    @EmbeddedId
+    private BolsaHasProductosKey id;  // Utilizar la clave compuesta
+
     @Column(name = "cantidad", nullable = false)
     private int cantidad;
 
     @ManyToOne
-    @MapsId("orderId")  // Mapear la propiedad orderId de OrderProductKey
+    @MapsId("bolsaId")
     @JoinColumn(name = "bolsa_id", nullable = false)
     private Bolsa bolsa;
 
     @ManyToOne
-    @MapsId("productId")  // Mapear la propiedad productId de OrderProductKey
+    @MapsId("productoId")
     @JoinColumn(name = "producto_id", nullable = false)
-    private Producto producto;
+    private Producto producto;
 }
+
+
 /*
 GenerationType.AUTO: Esta estrategia le permite al proveedor de JPA 
 elegir automáticamente la estrategia de generación más adecuada según 

@@ -2,7 +2,6 @@ package com.petsupermarket.app.controller;
 
 import com.petsupermarket.app.entity.BolsaHasProductos;
 import com.petsupermarket.app.service.BolsaHasProductosService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -14,7 +13,7 @@ public class BolsaHasProductosController {
 
     private final BolsaHasProductosService bolsaHasProductosService;
 
-    @Autowired
+   
     public BolsaHasProductosController(BolsaHasProductosService bolsaHasProductosService) {
         this.bolsaHasProductosService = bolsaHasProductosService;
     }

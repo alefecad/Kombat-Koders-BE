@@ -8,39 +8,36 @@ import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
+
 @Service
-public class TipoProductoServiceImpl implements TipoProductoService {
-
-    private final TipoProductoRepository tipoProductoRepository;
-
-    @Autowired
-    public TipoProductoServiceImpl(TipoProductoRepository tipoProductoRepository) {
-        this.tipoProductoRepository = tipoProductoRepository;
-    }
-
-    @Override
-    public Iterable<TipoProducto> getAllTiposProductos() {
-        return tipoProductoRepository.findAll();
-    }
-
-    @Override
-    public Optional<TipoProducto> getTipoProductoById(Long id) {
-        return tipoProductoRepository.findById(id);
-    }
-
-    @Override
-    public TipoProducto createTipoProducto(TipoProducto tipoProducto) {
-        return tipoProductoRepository.save(tipoProducto);
-    }
-
-    @Override
-    public TipoProducto updateTipoProducto(Long id, TipoProducto tipoProducto) {
-        tipoProducto.setId(id);
-        return tipoProductoRepository.save(tipoProducto);
-    }
-
-    @Override
-    public void deleteTipoProducto(Long id) {
-        tipoProductoRepository.deleteById(id);
-    }
+public class TipoProductoServiceImpl implements TipoProductoService{
+	TipoProductoRepository tipoProductoRepository;
+	
+	@Autowired
+	public TipoProductoServiceImpl(TipoProductoRepository tipoProductoRepository) {
+		this.tipoProductoRepository = tipoProductoRepository;
+	}
+	
+	@Override
+	public Iterable<TipoProducto> getAllTipoProducto(){
+		return tipoProductoRepository.findAll();
+	}
+	
+	public Optional<TipoProducto> getTipoProductoById(Long id){
+		return tipoProductoRepository.findById(id);
+	}
+	
+	public TipoProducto tipoProducto(TipoProducto tipoProducto) {
+		return tipoProductoRepository.save(tipoProducto);
+	}
+	
+	public TipoProducto updateTipoProducto(Long id, TipoProducto tipoProducto) {
+		tipoProducto.setId(id);
+		return tipoProductoRepository.save(tipoProducto);
+	}
+	
+	public void deleteTipoProducto(Long id) {
+		tipoProductoRepository.deleteById(id);
+	}
+	
 }

@@ -16,30 +16,23 @@ public class BolsaHasProductosServiceImpl implements BolsaHasProductosService {
     @Autowired
     BolsaHasProductosRepository bolsaHasProductosRepository;
 
-	@Override
-	public BolsaHasProductos getBolsaHasProductosById(Long id) {
-		Optional<BolsaHasProductos> existingBolsaHasProductos = bolsaHasProductosRepository.findById(id);
-		if( existingBolsaHasProductos.isPresent()) return existingBolsaHasProductos.get();
-		else throw new IllegalStateException("BolsaHasProductos does not exist" + id);		
-	}
-	
-	
-	@Override
-	public List<BolsaHasProductos> getAllBolsaHasProductos(Usuario usuario) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+    @Override
+    public Optional<BolsaHasProductos> getBolsaHasProductosById(Long id) {
+        return bolsaHasProductosRepository.findById(id);
+    }
 
-	@Override
-	public void saveBolsaHasProductos(BolsaHasProductos bolsaHasProductos) {
-	bolsaHasProductosRepository.save(bolsaHasProductos);
-		
-	}
+    @Override
+    public List<BolsaHasProductos> getAllBolsaHasProductos() {
+        return (List<BolsaHasProductos>) bolsaHasProductosRepository.findAll();
+    }
 
-	@Override
-	public void deleteBolsaHasProductos(Long id) {
-		bolsaHasProductosRepository.deleteById(id);
-		
-	}
+    @Override
+    public void saveBolsaHasProductos(BolsaHasProductos bolsaHasProductos) {
+        bolsaHasProductosRepository.save(bolsaHasProductos);
+    }
 
+    @Override
+    public void deleteBolsaHasProductos(Long id) {
+        bolsaHasProductosRepository.deleteById(id);
+    }
 }

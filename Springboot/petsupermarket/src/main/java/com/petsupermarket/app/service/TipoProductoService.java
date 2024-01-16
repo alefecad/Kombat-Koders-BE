@@ -1,18 +1,14 @@
 package com.petsupermarket.app.service;
 
-
-import java.util.List;
-import java.util.Optional;
 import com.petsupermarket.app.entity.TipoProducto;
 
+import java.util.Optional;
+
 public interface TipoProductoService {
-
-	TipoProducto getUserByTipoProducto(Long id);
-	TipoProducto getTipoProductoById(Long id);
-	TipoProducto crearTipoProducto(TipoProducto tipoProducto);
-	TipoProducto getTipoProductoByTipoProducto(String tipoProducto);
-	void eliminarTipoProducto(Long id);
-	Optional<TipoProducto> actualizarTipoProducto(Long id, TipoProducto tipoProducto);
-	List<TipoProducto> getAllTipoProductos();	
+	
+	Iterable<TipoProducto> getAllTipoProducto();
+	Optional<TipoProducto> getTipoProducto(Long id);
+	TipoProducto createTipoProducto(TipoProducto tipoProducto);
+	TipoProducto updateTipoProducto(Long id, TipoProducto tipoProducto);
+	void deleteTipoProducto(Long id);
 }
-
