@@ -11,33 +11,36 @@ import java.util.Optional;
 
 @Service
 public class TipoProductoServiceImpl implements TipoProductoService{
-	TipoProductoRepository tipoProductoRepository;
-	
-	@Autowired
-	public TipoProductoServiceImpl(TipoProductoRepository tipoProductoRepository) {
-		this.tipoProductoRepository = tipoProductoRepository;
-	}
-	
-	@Override
-	public Iterable<TipoProducto> getAllTipoProducto(){
-		return tipoProductoRepository.findAll();
-	}
-	
-	public Optional<TipoProducto> getTipoProductoById(Long id){
-		return tipoProductoRepository.findById(id);
-	}
-	
-	public TipoProducto tipoProducto(TipoProducto tipoProducto) {
-		return tipoProductoRepository.save(tipoProducto);
-	}
-	
-	public TipoProducto updateTipoProducto(Long id, TipoProducto tipoProducto) {
-		tipoProducto.setId(id);
-		return tipoProductoRepository.save(tipoProducto);
-	}
-	
-	public void deleteTipoProducto(Long id) {
-		tipoProductoRepository.deleteById(id);
-	}
-	
+	final TipoProductoRepository tipoProductoRepository;
+
+    @Autowired
+    public TipoProductoServiceImpl(TipoProductoRepository tipoProductoRepository) {
+        this.tipoProductoRepository = tipoProductoRepository;
+    }
+
+    @Override
+    public Iterable<TipoProducto> getAllTipoProducto() {
+        return tipoProductoRepository.findAll();
+    }
+
+    @Override
+    public Optional<TipoProducto> getTipoProducto(Long id) {
+        return tipoProductoRepository.findById(id);
+    }
+
+    @Override
+    public TipoProducto createTipoProducto(TipoProducto tipoProducto) {
+        return tipoProductoRepository.save(tipoProducto);
+    }
+
+    @Override
+    public TipoProducto updateTipoProducto(Long id, TipoProducto tipoProducto) {
+        tipoProducto.setId(id);
+        return tipoProductoRepository.save(tipoProducto);
+    }
+
+    @Override
+    public void deleteTipoProducto(Long id) {
+        tipoProductoRepository.deleteById(id);
+    }
 }

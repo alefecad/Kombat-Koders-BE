@@ -24,7 +24,7 @@ public class BolsaHasProductosKey implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	@Column( name = "bolsa_id" )
-	Long orderId;
+	Long bolsaId;
 	@Column( name = "producto_id" )
-	Long productId;
+	Long productoId;
 }

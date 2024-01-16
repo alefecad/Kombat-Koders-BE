@@ -16,7 +16,7 @@ import jakarta.persistence.*;
 public class BolsaHasProductos {
     
     @EmbeddedId
-    private BolsaHasProductosKey id;  // Utilizar la clave compuesta
+    BolsaHasProductosKey id;  // Utilizar la clave compuesta
 
     @Column(name = "cantidad", nullable = false)
     private int cantidad;
