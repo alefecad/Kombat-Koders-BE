@@ -1,0 +1,164 @@
+{
+	"info": {
+		"_postman_id": "be481c6b-ed53-4b80-97e0-6c17ac34c995",
+		"name": "Usuario",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30607862"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/api/v1/usuarios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/usuarios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/v1/usuarios/1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/usuarios/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"usuarios",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/v1/usuarios/query?email=diana@gmail.com",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/usuarios/query?email=diana@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"usuarios",
+						"query"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "diana@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/v1/usuarios",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"aaaaaaaa\",\r\n    \"direcion\": \"Calle Guadalajara 567, Col. Roma\",\r\n    \"telefono\": \"123456793\",\r\n    \"email\": \"aaaaaa@gmail.com\",\r\n    \"birthdate\": \"1986-03-03T06:00:00.000+00:00\",\r\n    \"ciudad\": \"CDMX\",\r\n    \"cp\": \"54909\",\r\n    \"contraseña\": \"contraseña15\",\r\n    \"active\": false,\r\n    \"rol\": {\r\n        \"id\": 2,\r\n        \"nombre\": \"usuario\",\r\n        \"descripcion\": \"integrantes_kk\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/usuarios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/v1/usuarios/10",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/usuarios/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"usuarios",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/v1/usuarios/10",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": 10,\r\n        \"nombre\": \"Pedro Sánchez\",\r\n        \"direcion\": \"Av. Cuauhtémoc 456, Col. Roma Norte\",\r\n        \"telefono\": \"123456788\",\r\n        \"email\": \"pedro@hotmail.com\",\r\n        \"birthdate\": \"1991-10-10T06:00:00.000+00:00\",\r\n        \"ciudad\": \"CDMX\",\r\n        \"cp\": \"54909\",\r\n        \"contraseña\": \"contraseña10\",\r\n        \"active\": true,\r\n        \"rol\": {\r\n            \"id\": 2,\r\n            \"nombre\": \"usuario\",\r\n            \"descripcion\": \"integrantes_kk\"\r\n        }\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/usuarios/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"usuarios",
+						"10"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
