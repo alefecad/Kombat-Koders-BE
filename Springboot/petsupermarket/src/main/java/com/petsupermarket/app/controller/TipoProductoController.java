@@ -24,7 +24,7 @@ public class TipoProductoController {
     }
 
     // Endpoint para obtener un tipo de producto por su ID
-    @GetMapping("/{id}")
+    @GetMapping("{id}")
     public TipoProducto getTipoProductoById(@PathVariable Long id) {
         return tipoProductoRepository.findById(id).orElse(null);
     }
@@ -36,14 +36,14 @@ public class TipoProductoController {
     }
 
     // Endpoint para actualizar un tipo de producto existente
-    @PutMapping("/{id}")
+    @PutMapping("{id}")
     public TipoProducto updateTipoProducto(@PathVariable Long id, @RequestBody TipoProducto tipoProducto) {
         tipoProducto.setId(id);
         return tipoProductoRepository.save(tipoProducto);
     }
 
     // Endpoint para eliminar un tipo de producto por su ID
-    @DeleteMapping("/{id}")
+    @DeleteMapping("{id}")
     public void deleteTipoProducto(@PathVariable Long id) {
         tipoProductoRepository.deleteById(id);
     }

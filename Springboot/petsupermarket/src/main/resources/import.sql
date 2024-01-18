@@ -1,5 +1,5 @@
-INSERT INTO rol (nombre,descripcion) VALUES ("admin","cliente");
-INSERT INTO rol (nombre,descripcion) VALUES ("usuario","integrantes_kk");
+INSERT INTO rol (nombre,descripcion) VALUES ("admin","integrantes_KombatKoders");
+INSERT INTO rol (nombre,descripcion) VALUES ("usuario","cliente");
 
 INSERT INTO usuario (nombre, direccion, telefono, email, contraseña, fecha_nacimiento, ciudad, cp, rol_id,activo) VALUES ("Olivia Rivas", "Av. Insurgentes Sur 1234, Col. Del Valle", "123456789", "olivia@gmail.com", "contraseña1", "2000-01-01", "CDMX", "54909", 1,1);
 INSERT INTO usuario (nombre, direccion, telefono, email, contraseña, fecha_nacimiento, ciudad, cp, rol_id,activo) VALUES ("Cynthia Rosales", "Av. Paseo de la Reforma 567, Col. Juárez", "123456780", "cynthia@hotmail.com", "contraseña2", "1999-02-02", "CDMX", "54909", 1,1);
@@ -7,7 +7,7 @@ INSERT INTO usuario (nombre, direccion, telefono, email, contraseña, fecha_naci
 INSERT INTO usuario (nombre, direccion, telefono, email, contraseña, fecha_nacimiento, ciudad, cp, rol_id,activo) VALUES ("Mario Mata", "Av. Álvaro Obregón 456, Col. Condesa", "123456782", "mario@hotmail.com", "contraseña4", "1997-04-04", "CDMX", "54909", 1,1);
 INSERT INTO usuario (nombre, direccion, telefono, email, contraseña, fecha_nacimiento, ciudad, cp, rol_id,activo) VALUES ("Miguel Ortega", "Calle Tamaulipas 678, Col. Hipódromo", "123456783", "miguel@gmail.com", "contraseña5", "1996-05-05", "CDMX", "54909", 1,1);
 INSERT INTO usuario (nombre, direccion, telefono, email, contraseña, fecha_nacimiento, ciudad, cp, rol_id,activo) VALUES ("Alejandro Flores", "Av. Álvaro Obregón 789, Col. Roma Norte", "123456784", "alejandro@hotmail.com", "contraseña6", "1995-06-06", "CDMX", "54909", 1,1);
-INSERT INTO usuario (nombre, direccion, telefono, email, contraseña, fecha_nacimiento, ciudad, cp, rol_id,activo) VALUES ("María Pérez", "Av. Insurgentes Sur 2468, Col. Del Valle", "123456785", "maria@gmail.com", "contraseña7", "1994-07-07", "CDMX", "54909", 1,1);
+INSERT INTO usuario (nombre, direccion, telefono, email, contraseña, fecha_nacimiento, ciudad, cp, rol_id,activo) VALUES ("María Pérez", "Av. Insurgentes Sur 2468, Col. Del Valle", "123456785", "maria@gmail.com", "contraseña7", "1994-07-07", "CDMX", "54909", 2,1);
 INSERT INTO usuario (nombre, direccion, telefono, email, contraseña, fecha_nacimiento, ciudad, cp, rol_id,activo) VALUES ("Juan González", "Av. Universidad 345, Col. Narvarte", "123456786", "juan@hotmail.com", "contraseña8", "1993-08-08", "CDMX", "54909", 2,1);
 INSERT INTO usuario (nombre, direccion, telefono, email, contraseña, fecha_nacimiento, ciudad, cp, rol_id,activo) VALUES ("Laura Martínez", "Calle Guadalajara 567, Col. Roma", "123456787", "laura@gmail.com", "contraseña9", "1992-09-09", "CDMX", "54909", 2,1);
 INSERT INTO usuario (nombre, direccion, telefono, email, contraseña, fecha_nacimiento, ciudad, cp, rol_id,activo) VALUES ("Pedro Sánchez", "Av. Cuauhtémoc 456, Col. Roma Norte", "123456788", "pedro@hotmail.com", "contraseña10", "1991-10-10", "CDMX", "54909", 2,1);

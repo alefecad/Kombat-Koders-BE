@@ -78,7 +78,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"id\": 1,\r\n    \"nombre\": \"AAAAAAAAAAAAAAAAAAAAAAAAAA\",\r\n    \"descripcion\": \"AAAAAAAAAAAAAAAAAAAAAA\",\r\n    \"contenido\": \"15 kg\",\r\n    \"precio\": 2000.0,\r\n    \"descuento\": 0,\r\n    \"existencia\": 5,\r\n    \"imagen\": \"https://www.amazon.com.mx/Hills-Science-Diet-Advanced-alimento/dp/B009IXOFOC/ref=lp_12478588011_1_4?pf_rd_p=2e6393f5-b0da-469a-bb10-dff5f616611a&pf_rd_r=Z5M2DX71D9HT8FJYSPYA&pd_rd_r=ab274ca2-87b1-41f2-8b94-800f9dd2dd8d&pd_rd_wg=jfCz9&pd_rd_i=B009IXOFOC&psc=1&th=1\",\r\n    \"marca\": \"Amazon\",\r\n    \"tipoProducto\": {\r\n        \"id\": 1,\r\n        \"tipoProducto\": \"Alimento\"\r\n    },\r\n    \"categoria\": {\r\n        \"id\": 1,\r\n        \"nombre\": \"Perro\"\r\n    }\r\n}",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"nombre\": \"Royal Canin Croquetas para Gatos, Kitten\",\r\n    \"descripcion\": \"Contenido adaptado de proteínas, vitaminas y minerales incluyendo vitamina D y calcio. Elevado contenido energético para adaptarse a este periodo de crecimiento intenso\",\r\n    \"contenido\": \"3.17 kg\",\r\n    \"precio\": 799.0,\r\n    \"descuento\": 0,\r\n    \"existencia\": 10,\r\n    \"imagen\": \"https://www.amazon.com.mx/Royal-Croquetas-Kitten-empaque-variar/dp/B00ECQ966W/ref=sr_1_1?crid=23MEVSXZOHNXT&keywords=alimento%2Bpara%2Bgato%2Broyal%2Bcanin%2Bkitten&qid=1705535037&s=pet-supplies&sprefix=alimento%2Bpara%2Bgato%2Broyal%2Cpets%2C138&sr=1-1&ufe=app_do%3Aamzn1.fos.19d97c10-80a3-4566-8ed8-d0331185c744&th=1\",\r\n    \"marca\": \"Royal Canin\",\r\n    \"tipoProducto\": {\r\n        \"id\": 1,\r\n        \"tipoProducto\": \"Alimento\"\r\n    },\r\n    \"categoria\": {\r\n        \"id\": 2,\r\n        \"nombre\": \"Gato\"\r\n    }\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -107,7 +107,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/api/v1/productos/7",
+					"raw": "http://localhost:8080/api/v1/productos/9",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -117,7 +117,7 @@
 						"api",
 						"v1",
 						"productos",
-						"7"
+						"9"
 					]
 				}
 			},
@@ -130,7 +130,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\"id\": 9,\r\n\"nombre\": \"Bbbbbbbbbbbbbbbb\",\r\n\"descripcion\": \"nnnnnnnnnnnnnnnA\",\r\n\"contenido\": \"15 kg\",\r\n\"precio\": 2000,\r\n\"descuento\": 0,\r\n\"existencia\": 10,\r\n\"imagen\": \"https://www.amazon.com.mx/Hills-Science-Diet-Advanced-alimento/dp/B009IXOFOC/ref=lp_12478588011_1_4?pf_rd_p=2e6393f5-b0da-469a-bb10-dff5f616611a&pf_rd_r=Z5M2DX71D9HT8FJYSPYA&pd_rd_r=ab274ca2-87b1-41f2-8b94-800f9dd2dd8d&pd_rd_wg=jfCz9&pd_rd_i=B009IXOFOC&psc=1&th=1\",\r\n\"marca\": \"Amazon\",\r\n\"tipoProducto\": {\r\n\"id\": 1,\r\n\"tipoProducto\": \"Alimento\"\r\n},\r\n\"categoria\": {\r\n\"id\": 1,\r\n\"nombre\": \"Perro\"\r\n}\r\n}",
+					"raw": "{\r\n\"nombre\": \"Royal Canin Croquetas para Gatos, Kitten\",\r\n\"descripcion\": \"Contenido adaptado de proteínas, vitaminas y minerales incluyendo vitamina D y calcio. Elevado contenido energético para adaptarse a este periodo de crecimiento intenso\",\r\n\"contenido\": \"3.17 kg\",\r\n\"precio\": 799.0,\r\n\"descuento\": 0,\r\n\"existencia\": 15,\r\n\"imagen\": \"https://www.amazon.com.mx/Royal-Croquetas-Kitten-empaque-variar/dp/B00ECQ966W/ref=sr_1_1?crid=23MEVSXZOHNXT&keywords=alimento%2Bpara%2Bgato%2Broyal%2Bcanin%2Bkitten&qid=1705535037&s=pet-supplies&sprefix=alimento%2Bpara%2Bgato%2Broyal%2Cpets%2C138&sr=1-1&ufe=app_do%3Aamzn1.fos.19d97c10-80a3-4566-8ed8-d0331185c744&th=1\",\r\n\"marca\": \"Royal Canin\",\r\n\"tipoProducto\": {\r\n\"id\": 1,\r\n\"tipoProducto\": \"Alimento\"\r\n},\r\n\"categoria\": {\r\n\"id\": 2,\r\n\"nombre\": \"Gato\"\r\n}\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"

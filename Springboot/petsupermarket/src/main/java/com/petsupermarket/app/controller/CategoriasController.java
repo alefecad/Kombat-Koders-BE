@@ -23,7 +23,7 @@ public class CategoriasController {
 	}
 	
 	//EndPoint para obtener un tipo de categoria por ID
-	@GetMapping("/{id}")
+	@GetMapping("{id}")
 	public Categorias getCategoriasById(@PathVariable Long id) {
 		return categoriasRepository.findById(id).orElse(null);
 	}
@@ -35,14 +35,14 @@ public class CategoriasController {
 	}
 	
 	//EndPoint para actualizar un tipo de categorias existente
-	@PutMapping("/{id}")
+	@PutMapping("{id}")
 	public Categorias updateCategorias(@PathVariable Long id, @RequestBody Categorias categorias) {
 		categorias.setId(id);
 		return categoriasRepository.save(categorias);
 	}
 	
 	//EndPoint para eliminar por ID
-	@DeleteMapping("/{id}")
+	@DeleteMapping("{id}")
 	public void deleteCategorias(@PathVariable Long id) {
 		categoriasRepository.deleteById(id);
 	}

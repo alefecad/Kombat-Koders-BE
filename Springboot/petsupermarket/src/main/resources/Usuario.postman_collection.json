@@ -84,7 +84,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"nombre\": \"aaaaaaaa\",\r\n    \"direcion\": \"Calle Guadalajara 567, Col. Roma\",\r\n    \"telefono\": \"123456793\",\r\n    \"email\": \"aaaaaa@gmail.com\",\r\n    \"birthdate\": \"1986-03-03T06:00:00.000+00:00\",\r\n    \"ciudad\": \"CDMX\",\r\n    \"cp\": \"54909\",\r\n    \"contraseña\": \"contraseña15\",\r\n    \"active\": false,\r\n    \"rol\": {\r\n        \"id\": 2,\r\n        \"nombre\": \"usuario\",\r\n        \"descripcion\": \"integrantes_kk\"\r\n    }\r\n}",
+					"raw": "{\r\n    \"nombre\": \"Ana Rodríguez\",\r\n    \"direcion\": \"Calle Guadalajara 567, Col. Roma\",\r\n    \"telefono\": \"123456793\",\r\n    \"email\": \"ana.rodriguez@gmail.com\",\r\n    \"birthdate\": \"1986-03-03T06:00:00.000+00:00\",\r\n    \"ciudad\": \"CDMX\",\r\n    \"cp\": \"54909\",\r\n    \"contraseña\": \"contraseña19\",\r\n    \"active\": true,\r\n    \"rol\": {\r\n        \"id\": 2,\r\n        \"nombre\": \"usuario\",\r\n        \"descripcion\": \"cliente\"\r\n    }\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -113,7 +113,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/api/v1/usuarios/10",
+					"raw": "http://localhost:8080/api/v1/usuarios/19",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -123,7 +123,7 @@
 						"api",
 						"v1",
 						"usuarios",
-						"10"
+						"19"
 					]
 				}
 			},
@@ -136,7 +136,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n        \"id\": 10,\r\n        \"nombre\": \"Pedro Sánchez\",\r\n        \"direcion\": \"Av. Cuauhtémoc 456, Col. Roma Norte\",\r\n        \"telefono\": \"123456788\",\r\n        \"email\": \"pedro@hotmail.com\",\r\n        \"birthdate\": \"1991-10-10T06:00:00.000+00:00\",\r\n        \"ciudad\": \"CDMX\",\r\n        \"cp\": \"54909\",\r\n        \"contraseña\": \"contraseña10\",\r\n        \"active\": true,\r\n        \"rol\": {\r\n            \"id\": 2,\r\n            \"nombre\": \"usuario\",\r\n            \"descripcion\": \"integrantes_kk\"\r\n        }\r\n    }",
+					"raw": "{\r\n        \"id\": 10,\r\n        \"nombre\": \"Pedro Sánchez\",\r\n        \"direcion\": \"Av. Cuauhtémoc 456, Col. Roma Norte\",\r\n        \"telefono\": \"123456788\",\r\n        \"email\": \"pedro@hotmail.com\",\r\n        \"birthdate\": \"1992-10-10T06:00:00.000+00:00\",\r\n        \"ciudad\": \"CDMX\",\r\n        \"cp\": \"54909\",\r\n        \"contraseña\": \"contraseña10\",\r\n        \"active\": true,\r\n        \"rol\": {\r\n            \"id\": 2,\r\n            \"nombre\": \"usuario\",\r\n            \"descripcion\": \"cliente\"\r\n        }\r\n    }",
 					"options": {
 						"raw": {
 							"language": "json"

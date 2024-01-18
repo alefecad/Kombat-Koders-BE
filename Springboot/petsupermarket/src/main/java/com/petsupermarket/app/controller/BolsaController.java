@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/bolsas")
+@RequestMapping("api/v1/bolsas")
 public class BolsaController {
 
     @Autowired
@@ -27,13 +27,13 @@ public class BolsaController {
         return bolsaService.obtenerTodasBolsas();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("{id}")
     public ResponseEntity<Bolsa> obtenerBolsaPorId(@PathVariable Long id) {
         Optional<Bolsa> bolsa = bolsaService.obtenerBolsaPorId(id);
         return bolsa.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    @GetMapping("/usuario/{usuarioId}")
+    @GetMapping("usuario/{usuarioId}")
     public ResponseEntity<List<Bolsa>> obtenerBolsasPorUsuario(@PathVariable Long id) {
         Usuario usuario = usuarioService.getUsuarioById(id);
         if (usuario != null) {
@@ -51,13 +51,13 @@ public class BolsaController {
         return ResponseEntity.status(HttpStatus.CREATED).body(nuevaBolsa);
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("{id}")
     public ResponseEntity<Bolsa> actualizarBolsa(@PathVariable Long id, @RequestBody Bolsa bolsa) {
         Optional<Bolsa> bolsaActualizada = bolsaService.actualizarBolsa(id, bolsa);
         return bolsaActualizada.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("{id}")
     public ResponseEntity<Void> eliminarBolsa(@PathVariable Long id) {
         bolsaService.eliminarBolsa(id);
         return ResponseEntity.noContent().build();
