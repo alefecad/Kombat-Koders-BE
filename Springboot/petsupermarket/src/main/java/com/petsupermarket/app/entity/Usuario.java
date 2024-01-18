@@ -23,7 +23,7 @@ public class Usuario {
 		@Column(name="nombre", nullable=false, length=70)
 		private String nombre;
 		@Column(name="direccion", nullable=false, length=300)
-		private String direcion;
+		private String direccion;
 		@Column(name="telefono", nullable=false, length=30)
 		private String telefono;
 		@Column(name="email", nullable=false, length=120, unique=true)

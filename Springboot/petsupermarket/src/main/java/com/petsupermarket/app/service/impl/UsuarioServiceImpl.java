@@ -29,6 +29,7 @@ public class UsuarioServiceImpl implements UsuarioService {
 		Optional<Usuario> existingUsuario = usuarioRepository.findByEmail(email);
 		if( existingUsuario.isPresent()) return existingUsuario.get();
 		else throw new IllegalStateException("Usuario does not exist with email " + email);
+		
 	}
 
 
@@ -39,7 +40,7 @@ public class UsuarioServiceImpl implements UsuarioService {
 		existingUsuario.setCiudad(usuario.getCiudad());
 		existingUsuario.setContraseña(usuario.getContraseña());
 		existingUsuario.setCp(usuario.getCp());
-		existingUsuario.setDirecion(usuario.getDirecion());
+		existingUsuario.setDireccion(usuario.getDireccion());
 		existingUsuario.setEmail(usuario.getEmail());
 		existingUsuario.setNombre(usuario.getNombre());
 		existingUsuario.setRol(usuario.getRol());

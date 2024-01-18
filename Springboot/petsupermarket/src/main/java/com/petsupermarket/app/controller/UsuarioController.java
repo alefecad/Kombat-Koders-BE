@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import com.petsupermarket.app.entity.Usuario;
 import com.petsupermarket.app.service.UsuarioService;
 
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("api/v1/usuarios")
 public class UsuarioController {
@@ -32,10 +33,17 @@ public class UsuarioController {
 		return new ResponseEntity<>(newUsuario, HttpStatus.CREATED );
 	}
 	
-	@GetMapping("query") 
-	ResponseEntity<Usuario> getUserByEmail(@RequestParam(name="email") String email) {
+	@PostMapping("query") 
+	ResponseEntity<Usuario> getUserByEmail(@RequestParam(name="email") String email, @RequestBody Usuario loginUsuario)  {
 		Usuario usuario = usuarioService.getUsuarioByEmail(email);
-		return new ResponseEntity<>(usuario, HttpStatus.OK );
+		usuario.getContraseña();
+		loginUsuario.getContraseña();
+		if (usuario.getContraseña().equals(loginUsuario.getContraseña() )){	
+			return new ResponseEntity<>(usuario, HttpStatus.OK );
+		} else {
+			throw new IllegalStateException("La contraseña no es la correcta, verifica tu contraseña");
+		}
+		
 	}
 	
 	@PutMapping("{id}")
