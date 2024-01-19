@@ -27,8 +27,8 @@ public class BolsaHasProductosServiceImpl implements BolsaHasProductosService {
     }
 
     @Override
-    public void saveBolsaHasProductos(BolsaHasProductos bolsaHasProductos) {
-        bolsaHasProductosRepository.save(bolsaHasProductos);
+    public BolsaHasProductos saveBolsaHasProductos(BolsaHasProductos bolsaHasProductos) {
+    return bolsaHasProductosRepository.save(bolsaHasProductos);
     }
 
     @Override

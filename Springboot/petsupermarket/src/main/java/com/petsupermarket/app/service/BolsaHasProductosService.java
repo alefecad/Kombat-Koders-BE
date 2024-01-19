@@ -11,7 +11,7 @@ public interface BolsaHasProductosService {
 
     List<BolsaHasProductos> getAllBolsaHasProductos();  // Corregir el tipo de retorno
 
-    void saveBolsaHasProductos(BolsaHasProductos bolsaHasProductos);
+    BolsaHasProductos saveBolsaHasProductos(BolsaHasProductos bolsaHasProductos);
 
     void deleteBolsaHasProductos(Long id);
 }

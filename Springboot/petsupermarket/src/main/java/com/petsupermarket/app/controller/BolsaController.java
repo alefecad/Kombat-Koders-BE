@@ -17,10 +17,10 @@ import java.util.Optional;
 public class BolsaController {
 
     @Autowired
-    private BolsaService bolsaService;
+    BolsaService bolsaService;
 
     @Autowired
-    private UsuarioService usuarioService;
+    UsuarioService usuarioService;
 
     @GetMapping
     public List<Bolsa> obtenerTodasBolsas() {
@@ -28,13 +28,13 @@ public class BolsaController {
     }
 
     @GetMapping("{id}")
-    public ResponseEntity<Bolsa> obtenerBolsaPorId(@PathVariable Long id) {
+    public ResponseEntity<Bolsa> obtenerBolsaPorId(@PathVariable ("id") Long id) {
         Optional<Bolsa> bolsa = bolsaService.obtenerBolsaPorId(id);
         return bolsa.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
     @GetMapping("usuario/{usuarioId}")
-    public ResponseEntity<List<Bolsa>> obtenerBolsasPorUsuario(@PathVariable Long id) {
+    public ResponseEntity<List<Bolsa>> obtenerBolsasPorUsuario(@PathVariable ("usuraioId") Long id) {
         Usuario usuario = usuarioService.getUsuarioById(id);
         if (usuario != null) {
             List<Bolsa> bolsas = bolsaService.obtenerBolsasPorUsuario(usuario);
@@ -45,7 +45,7 @@ public class BolsaController {
     }
 
 
-    @PostMapping
+    @PostMapping()
     public ResponseEntity<Bolsa> crearBolsa(@RequestBody Bolsa bolsa) {
         Bolsa nuevaBolsa = bolsaService.crearBolsa(bolsa);
         return ResponseEntity.status(HttpStatus.CREATED).body(nuevaBolsa);

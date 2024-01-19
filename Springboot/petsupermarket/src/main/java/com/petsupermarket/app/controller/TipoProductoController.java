@@ -10,12 +10,13 @@ import com.petsupermarket.app.repository.TipoProductoRepository;
 @RequestMapping("api/v1/tipoProducto")
 public class TipoProductoController {
 
-    private final TipoProductoRepository tipoProductoRepository;
+	@Autowired
+    TipoProductoRepository tipoProductoRepository;
 
-    @Autowired
-    public TipoProductoController(TipoProductoRepository tipoProductoRepository) {
-        this.tipoProductoRepository = tipoProductoRepository;
-    }
+   
+    //public TipoProductoController(TipoProductoRepository tipoProductoRepository) {
+    //    this.tipoProductoRepository = tipoProductoRepository;
+    //}
 
     // Endpoint para obtener todos los tipos de productos
     @GetMapping
@@ -25,7 +26,7 @@ public class TipoProductoController {
 
     // Endpoint para obtener un tipo de producto por su ID
     @GetMapping("{id}")
-    public TipoProducto getTipoProductoById(@PathVariable Long id) {
+    public TipoProducto getTipoProductoById(@PathVariable ("id") Long id) {
         return tipoProductoRepository.findById(id).orElse(null);
     }
 

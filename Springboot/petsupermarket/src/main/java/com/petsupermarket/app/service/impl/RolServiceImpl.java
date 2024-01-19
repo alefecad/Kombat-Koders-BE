@@ -11,12 +11,12 @@ import java.util.Optional;
 @Service
 public class RolServiceImpl implements RolService{
 	
-	private final RolRepository rolRepository;
-
-    @Autowired
-    public RolServiceImpl(RolRepository rolRepository) {
-        this.rolRepository = rolRepository;
-    }
+	 @Autowired	 
+	RolRepository rolRepository;
+   
+    //public RolServiceImpl(RolRepository rolRepository) {
+    //    this.rolRepository = rolRepository;
+    //}
 
     @Override
     public Rol obtenerRolPorId(Long rolId) {

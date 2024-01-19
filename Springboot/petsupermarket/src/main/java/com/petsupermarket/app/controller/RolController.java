@@ -9,15 +9,16 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("api/v1/roles")
 public class RolController {
 	
-	private final RolService rolService;
+	@Autowired
+	RolService rolService;
 
-    @Autowired
-    public RolController(RolService rolService) {
-        this.rolService = rolService;
-    }
+    
+    //public RolController(RolService rolService) {
+    //    this.rolService = rolService;
+    //}
 
     @GetMapping("{rolId}")
-    public Rol obtenerRolPorId(@PathVariable Long rolId) {
+    public Rol obtenerRolPorId(@PathVariable ("rolId") Long rolId) {
         return rolService.obtenerRolPorId(rolId);
     }
 

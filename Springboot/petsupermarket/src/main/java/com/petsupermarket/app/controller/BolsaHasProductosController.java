@@ -31,8 +31,9 @@ public class BolsaHasProductosController {
     }
 
     @PostMapping("save")
-    public void saveBolsaHasProductos(@RequestBody BolsaHasProductos bolsaHasProductos) {
-        bolsaHasProductosService.saveBolsaHasProductos(bolsaHasProductos);
+    public BolsaHasProductos saveBolsaHasProductos(@RequestBody BolsaHasProductos bolsaHasProductos) {
+        return bolsaHasProductosService.saveBolsaHasProductos(bolsaHasProductos);
+        
     }
 
     @DeleteMapping("delete/{id}")

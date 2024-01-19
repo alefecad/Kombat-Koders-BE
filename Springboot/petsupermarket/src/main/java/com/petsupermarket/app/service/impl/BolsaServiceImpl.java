@@ -16,7 +16,7 @@ import java.util.Optional;
 public class BolsaServiceImpl implements BolsaService {
 
     @Autowired
-    private BolsaRepository bolsaRepository;
+    BolsaRepository bolsaRepository;
 
     @Override
     public List<Bolsa> obtenerTodasBolsas() {
@@ -35,6 +35,7 @@ public class BolsaServiceImpl implements BolsaService {
 
     @Override
     public Bolsa crearBolsa(Bolsa bolsa) {
+    	bolsa.setId(null);
         return bolsaRepository.save(bolsa);
     }
 
