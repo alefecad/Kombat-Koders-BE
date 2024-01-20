@@ -17,12 +17,12 @@ PetSupermarket es una plataforma integral para la gestión de una tienda de masc
 
 ## Integrantes del Equipo
 
-- Alejandro Flores Escobar
-- Cynthia Alejandra Rosales Guevara
-- Mario Alberto Mata Soto
-- Olivia Guadalupe Rivas Rodriguez
-- Brayan Hernandez Camacho
-- Miguel Angel Ortega Gomez
+- [Alejandro Flores Escobar](https://github.com/alefecad)
+- [Cynthia Alejandra Rosales Guevara](https://github.com/cyroguer)
+- [Mario Alberto Mata Soto](https://github.com/mmatas1300)
+- [Olivia Guadalupe Rivas Rodriguez](https://github.com/olivisrivas)
+- [Brayan Hernandez Camacho]()
+- [Miguel Angel Ortega Gomez](https://github.com/6Angel4)
 
 ## Tecnologías Utilizadas
 
@@ -34,3 +34,9 @@ PetSupermarket es una plataforma integral para la gestión de una tienda de masc
 
 ## MockUp (Figma)
 - Visita nuestro [MockUp-Figma](https://www.figma.com/file/izBXfIFqpsYvN5sFegRE9A/PS-Wireframe?type=design&node-id=0-1&mode=design)
+
+- ## Netlify 
+-  Visita nuestro [Sitio web](https://petsupermarket.netlify.app/)
+
+## Render
+- Despliega nuestro [Web Service](https://petsupermarket-be.onrender.com)
