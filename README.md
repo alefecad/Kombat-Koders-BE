@@ -21,7 +21,7 @@ PetSupermarket es una plataforma integral para la gestión de una tienda de masc
 - [Cynthia Alejandra Rosales Guevara](https://github.com/cyroguer)
 - [Mario Alberto Mata Soto](https://github.com/mmatas1300)
 - [Olivia Guadalupe Rivas Rodriguez](https://github.com/olivisrivas)
-- [Brayan Hernandez Camacho]()
+- [Brayan Hernandez Camacho](https://github.com/brahdz)
 - [Miguel Angel Ortega Gomez](https://github.com/6Angel4)
 
 ## Tecnologías Utilizadas
